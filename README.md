@@ -28,7 +28,7 @@ This project is divided into 3 parts,:
 # Getting Started
 This project codes are written inform of a script which can be run on any idle. It is contained in 3 folders:
 * Data: It contains the ETL code and the two data files. The script takes the file paths of the two datasets and database, cleans the datasets, and stores the clean data into a SQLite database in the specified database file path. To run ETL pipeline that cleans data and stores in database `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-* Models: It contains the ML and NLP pipeline codes in the form of a script.  The script takes the database file path and model file path, creates and trains a classifier, and stores the classifier into a pickle file to the specified model file path. To run ML pipeline that trains classifier and saves `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+* Models: It contains the ML and NLP pipeline codes in the form of a script. There are 2 script, one is name train_classifier.py and the other is train_classifier_with_Lema. The difference is that the script named train_classifier_with_Lema has Lemmetizer in the token function why the other did not have. The script takes the database file path and model file path, creates and trains a classifier, and stores the classifier into a pickle file to the specified model file path. To run ML pipeline that trains classifier and saves `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 * WebApp: It contains all the required codes to run the app.
         
 
